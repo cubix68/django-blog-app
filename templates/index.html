@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="jumbotron text-center">
+    <h3>Maket Albümü'ne Hoşgeldiniz</h3>
+    <p>Bu blogda maket severler olarak paylaşılan maketleri inceleyebilirsiniz ve kayıt olup siz de maketlerinizi paylaşabilirsiniz.</p>
+</div>
+    
+<p>
+    {% if request.user.is_authenticated %}
+        Giriş Yapılmış, {{request.user.username}}
+    {% else %}
+        Giriş Yapılmamış
+    
+    {% endif %}
+
+
+
+</p>
+
+{% endblock body %}
+
+
+    
